@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale des Balises HTML</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .description {
+            color: #34495e;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+        
+        .mind-map {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 350px;
+            transition: transform 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-title {
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .tag {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .tag-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .tag-description {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .html {
+            background: #e74c3c;
+        }
+        
+        .head {
+            background: #3498db;
+        }
+        
+        .text {
+            background: #2ecc71;
+        }
+        
+        .content {
+            background: #f39c12;
+        }
+        
+        .media {
+            background: #9b59b6;
+        }
+        
+        .table {
+            background: #1abc9c;
+        }
+        
+        .form {
+            background: #d35400;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .mind-map {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carte Mentale des Balises HTML</h1>
+        <p class="description">
+            Cette carte mentale présente les balises HTML de base organisées par catégories. 
+            Passez votre souris sur les cartes pour les voir s'animer et explorez les différentes balises essentielles au HTML.
+        </p>
+    </header>
+    
+    <div class="mind-map">
+        <div class="category">
+            <div class="category-title html">Structure de base</div>
+            <div class="tag">
+                <div class="tag-name">&lt;!DOCTYPE html&gt;</div>
+                <div class="tag-description">Déclaration du type de document</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;html&gt;</div>
+                <div class="tag-description">Conteneur principal de la page</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;head&gt;</div>
+                <div class="tag-description">En-tête de la page (métadonnées)</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;body&gt;</div>
+                <div class="tag-description">Corps de la page (contenu visible)</div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-title head">En-tête</div>
+            <div class="tag">
+                <div class="tag-name">&lt;title&gt;</div>
+                <div class="tag-description">Titre de la page (onglet du navigateur)</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;meta&gt;</div>
+                <div class="tag-description">Métadonnées (encodage, viewport, etc.)</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;link&gt;</div>
+                <div class="tag-description">Liaison avec fichiers externes (CSS)</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;style&gt;</div>
+                <div class="tag-description">Styles CSS intégrés</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;script&gt;</div>
+                <div class="tag-description">Code JavaScript</div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-title text">Textes</div>
+            <div class="tag">
+                <div class="tag-name">&lt;h1&gt; à &lt;h6&gt;</div>
+                <div class="tag-description">Titres et sous-titres</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;p&gt;</div>
+                <div class="tag-description">Paragraphe</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;span&gt;</div>
+                <div class="tag-description">Conteneur inline générique</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;br&gt;</div>
+                <div class="tag-description">Saut de ligne</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;hr&gt;</div>
+                <div class="tag-description">Ligne horizontale</div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-title content">Contenu</div>
+            <div class="tag">
+                <div class="tag-name">&lt;div&gt;</div>
+                <div class="tag-description">Conteneur générique</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;main&gt;</div>
+                <div class="tag-description">Contenu principal</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;section&gt;</div>
+                <div class="tag-description">Section de page</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;article&gt;</div>
+                <div class="tag-description">Contenu autonome</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;header&gt;</div>
+                <div class="tag-description">En-tête de section</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;footer&gt;</div>
+                <div class="tag-description">Pied de page</div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-title media">Médias</div>
+            <div class="tag">
+                <div class="tag-name">&lt;img&gt;</div>
+                <div class="tag-description">Image</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;audio&gt;</div>
+                <div class="tag-description">Contenu audio</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;video&gt;</div>
+                <div class="tag-description">Contenu vidéo</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;figure&gt;</div>
+                <div class="tag-description">Figure autonome</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;figcaption&gt;</div>
+                <div class="tag-description">Légende de figure</div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-title table">Tableaux</div>
+            <div class="tag">
+                <div class="tag-name">&lt;table&gt;</div>
+                <div class="tag-description">Tableau</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;tr&gt;</div>
+                <div class="tag-description">Ligne de tableau</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;td&gt;</div>
+                <div class="tag-description">Cellule de tableau</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;th&gt;</div>
+                <div class="tag-description">Cellule d'en-tête de tableau</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;thead&gt;</div>
+                <div class="tag-description">En-tête de tableau</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;tbody&gt;</div>
+                <div class="tag-description">Corps de tableau</div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-title form">Formulaires</div>
+            <div class="tag">
+                <div class="tag-name">&lt;form&gt;</div>
+                <div class="tag-description">Formulaire</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;input&gt;</div>
+                <div class="tag-description">Champ de saisie</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;textarea&gt;</div>
+                <div class="tag-description">Zone de texte multiligne</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;select&gt;</div>
+                <div class="tag-description">Liste déroulante</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;button&gt;</div>
+                <div class="tag-description">Bouton</div>
+            </div>
+            <div class="tag">
+                <div class="tag-name">&lt;label&gt;</div>
+                <div class="tag-description">Étiquette de champ</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Carte mentale des balises HTML de base - Conçue pour l'apprentissage</p>
+    </div>
+</body>
+</html>
